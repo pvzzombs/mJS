@@ -7,7 +7,7 @@ m.getKey = function(x) {
     m.New = x;
     m.Old = y;
     if (m.New.length < m.Old.length) {
-        return [m.Store[0]];
+        return [m.Store[0], -1];
     } else if (m.New.length > m.Old.length) {
         var i, a = m.Old + " ",
             b = a.split(""),
@@ -16,10 +16,7 @@ m.getKey = function(x) {
             if (c[i] != b[i]) {
                 return [c[i], i];
             }
-        }
-        if (c[i].test(/[\n\r]/g)){
-        	return [m.Store[1], i];
-        }
+        }	
         return ["space", i - 1];
     } else {
         return [m.Store[2], -1];
@@ -27,3 +24,4 @@ m.getKey = function(x) {
 }
 m.appear = function(d, el, ty) {
     document.getElementById(el)[ty] = m.getKey(d);
+}
