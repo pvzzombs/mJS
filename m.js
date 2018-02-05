@@ -1,4 +1,5 @@
-//version 1.1
+//version 1.2
+//fixed syntax
 //now supports custom array for storing key values
 var m = {};
 m.Old = "";
@@ -30,9 +31,9 @@ m.getKey = function(x,w) {
     var y = m.New;
     m.New = x;
     m.Old = y;
-    if (m.New.length < m.Old.length) {
+    if ((m.New.length+1) == m.Old.length) {
         return [m.Store[0], -1];
-    } else if (m.New.length > m.Old.length) {
+    } else if (m.New.length == (m.Old.length+1)) {
         var i, a = m.Old + " ",
             b = a.split(""),
             c = m.New.split("");
