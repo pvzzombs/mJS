@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample on how to use m.js</title>
+<script type="text/javascript" src="m.js"></script>
+</head>
+<body>
+	<textarea cols="25" rows="20" oninput="display(this.value)"></textarea>
+	
+	<p id="disp"></p>
+	<p id="array"></p>
+	<script type="text/javascript">
+	//declare a public variable to save always
+	var publicArray = ["",""];
+	//must be containg 2 empty strings
+	function display(x){
+	//create a variable containing the key
+	//use the m.getKey()
+		var a = m.getKey(x,publicArray);
+		//we supply our own array
+		document.getElementById("array").innerText = a.join(" : ");
+	}
+	
+	</script>
+</body>
+</html>
