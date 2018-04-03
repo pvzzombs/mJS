@@ -1,4 +1,6 @@
 # mJS
+[![CodeFactor](https://www.codefactor.io/repository/github/pvzzombs/mjs/badge)](https://www.codefactor.io/repository/github/pvzzombs/mjs)
+<br/>
 A mini-javascript library for determing key values oninput<br />
 Best use for mobile and devices that doesn't support onkeyup and onkeydown event detection.<br/>
 <b><a href="https://github.com/pvzzombs/mJS/raw/master/m.js">Download</a></b>
