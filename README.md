@@ -6,6 +6,7 @@ Best use for mobile and devices that doesn't support onkeyup and onkeydown event
 <b><a href="https://github.com/pvzzombs/mJS/raw/master/m.js">Download</a></b>
 <br/><br />
 ### Usage ###
+The reason why this library exist is because of the conflict that android soft keyboards are not properly returning the correct key code. So here it is and how it is used:
 
 <b>Step 1.</b> Include mJS in your document head<br/>
 ```html
@@ -29,4 +30,9 @@ Best use for mobile and devices that doesn't support onkeyup and onkeydown event
 <br/>
 <br />
 
+### How it works ###
+
+It captures each key you type, then it is stored in a array. Each time you type, the string that is stored in the array is compared to the old string. If a new character is found in the new string, then it is the character you typed. 
+ 
+ 
 #### That's it thanks for using.
